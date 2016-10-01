@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+
+    "name": "React Collaborative Browsing",
+    "description": "Chrome extension for that allows for Collaborative Browsing",
+    "version": "1.0",
+
+    "permissions": [
+      "activeTab"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "css": ["styles.css"],
+            "js": ["content_script.js"]
+        }
+    ]
+}

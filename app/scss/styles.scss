@@ -1,0 +1,83 @@
+.col-brows-middle {
+    position:fixed;
+    left: 0%;
+    top: 50%;
+    z-index:100;
+}
+
+.col-brows-top {
+    position:fixed;
+    left: 50%;
+    top: 0%;
+    z-index:100;
+}
+
+.col-brows-bottom {
+    position:fixed;
+    left: 50%;
+    bottom: 0%;
+    z-index:100;
+}
+
+.col-brows-circle {
+    opacity:0.6;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 100%;
+
+    color: #ffffff;
+
+    z-index: 1000000000000;
+}
+
+.centered {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+    top: 15px;
+}
+
+.blue {
+    background-color: #064E7D;
+}
+
+.col-brows-comment-star {
+    color: #064E7D;
+}
+.col-brows-comment-star:hover {
+    cursor: pointer;
+}
+
+.col-brows-comment-thread-container {
+    font-size: 12px;
+    display: inline-block;
+    background-color: #d6d6d6;
+    border-radius: 10px;
+    padding: 10px 5px;
+    position: absolute;
+}
+
+.col-brows-comment-thread-container.hidden {
+    display: none;
+}
+
+.col-brows-comment-container {
+    text-align: left;
+    padding: 5px;
+    border-bottom: 1px black solid
+}
+
+input.col-brows-new-comment {
+    background-color: #d6d6d6;
+    border: none;
+    padding: 0;
+    width: 100%;
+}
+
+input.col-brows-new-comment:focus {
+    outline-width: 0;
+}
