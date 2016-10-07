@@ -21,11 +21,11 @@ var scripts = browserify(coffeeDir, {
             ],
             entryPoints: ['content_script.coffee']
         },
-        "load_craigslist.js": {
+        "background.js": {
             transform: [
                 require('coffee-reactify')
             ],
-            entryPoints: ['load_craigslist.coffee']
+            entryPoints: ['background.coffee']
         }
     }
 });

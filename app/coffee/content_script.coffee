@@ -17,6 +17,14 @@ UsersOnPage = React.createClass({
         </div>
 })
 
+CommentThread = React.createClass({
+    displayName: 'ColBrowsCommentThread'
+    getInitialState: -> {}
+
+    render: ->
+        <span className="col-brows-comment-star">*</span>
+})
+
 ColBrowsContainer = React.createClass({
     displayName: 'ColBrowsContainer'
     getInitialState: -> 
@@ -65,15 +73,12 @@ if document.body
         containerDiv
     )
 
-    appState = { 
-        viewers: [{
-            scrollPosition: 50
-        }, {
-            scrollPosition: 1500
-        }]
-    }
+    appState = {}
 
-    app.setState(appState)
+    port = chrome.runtime.connect({name: "col-brows"})
+    port.onMessage.addListener (data) ->
+        appState = data
+        app.setState(appState);
 
     window.addEventListener 'scroll', (e) =>
         ticking = false
